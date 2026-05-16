@@ -1,0 +1,131 @@
+/* Police Absolute */
+@font-face {
+    font-family: 'Absolute';
+    src: url('fonts/Absolute.ttf') format('truetype');
+}
+
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    margin: 0;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    background: #222;
+    padding: 15px;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: 0.3s;
+    font-family: 'Absolute', cursive; /* Absolute uniquement sur la barre du haut */
+}
+
+/* Animation hover nav */
+nav ul li a:hover {
+    color: #5865F2;
+    transform: translateY(-3px);
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 3px;
+    background: #5865F2;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Sections */
+.page-section {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Boutons */
+.buttons a {
+    padding: 12px 20px;
+    margin-right: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* YouTube rouge */
+.yt {
+    background: #FF0000;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.25s;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+.yt:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 18px rgba(255, 0, 0, 0.9);
+}
+
+/* Discord violet */
+.discord {
+    background: #5865F2;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.25s;
+    box-shadow: 0 0 12px rgba(88, 101, 242, 0.6);
+}
+
+.discord:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 18px rgba(88, 101, 242, 0.9);
+}
+
+/* Vidéos */
+.videos {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.video img {
+    width: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.video img:hover {
+    transform: scale(1.05);
+}
